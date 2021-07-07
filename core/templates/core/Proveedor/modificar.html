@@ -15,10 +15,11 @@
                 <hr class='text-primary pt-1'>
                 <form action="" method="post" class="pt-3" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {{form | crispy}}
+                    {{form1 | crispy}}
+
                     <hr>
                     <div class="d-flex justify-content-end " >
-                        <input type="reset" value="Cancelar" class="btn btn-secondary">
+                        <a href="{%url 'listar_proveedores'%}" class="btn btn-secondary">Cancelar</a>
                         &nbsp;
                         <input type="submit" value="Modificar" class="btn btn-primary">
                     </div>

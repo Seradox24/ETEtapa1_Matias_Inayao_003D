@@ -2,10 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-opciones_monedas=[
-    [0,'Pesos'],
-    [1,'Dólares']
-]
 
 class Monedas(models.Model):
     idMoneda = models.IntegerField(primary_key=True,verbose_name='id de monedas')

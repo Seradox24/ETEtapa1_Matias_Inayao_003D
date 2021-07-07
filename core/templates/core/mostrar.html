@@ -2,23 +2,25 @@
 
 {%block contenido%}
 {%load static %}
-<div  class="mt-5 pt-5 px-5 col-12 bg-dark text-dark row d-flex " >
+
+
+<div  class="mt-5 pt-5 px-5 col-12 bg-dark text-dark row flex  d-block d-flex  " >
     {%for p in proveedores%}
     <div class="col">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pt-4"> 
-            <div class="card" style="width: 18rem;">
+            <div class="card h-100" style="width: 18rem;">
                 {%if p.logo%}
-                <img src="{{p.logo.url}}" class="card-img-top" alt="...">
+                <img src="{{p.logo.url}}" class="card-img-top " alt="..." width="300px" height="300px">
                 {%endif%}
                 <div class="card-body">
-                  <h5 class="card-title">{{p.nombre | capfirst}}</h5>
-                  <p class="card-text">para ver la informacion completa del proveedor haga clik en ver mas.</p>
+                  <h5 class="card-title fw-bold">Proveedor :{{p.nombre | capfirst}}</h5>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><p class="fw-bold">Numero de contacto</p>{{p.telefono}}</li>
-                    <li class="list-group-item"><p class="fw-bold">Email</p>{{p.email}}</li>
-                    <li class="list-group-item"><p class="fw-bold">País</p>{{p.moneda}}</li>
+                    <li class="list-group-item"><p class="fw-bold">Telefono</p>{{p.telefono}}</li>
+                    <li class="list-group-item"><p class="fw-bold">Direccion</p>{{p.direccion}}</li>
+                    <li class="list-group-item"><p class="fw-bold">Correo</p>{{p.email}}</li>
+                    <li class="list-group-item"><p class="fw-bold">Pais</p>{{p.pais}}</li>
+                    <li class="list-group-item"><p class="fw-bold">Moneda</p>{{p.moneda}}</li>
                   </ul>
-                  <a href="#" class="btn btn-primary">Ver más</a>
                 </div>
               </div>
         </div>
