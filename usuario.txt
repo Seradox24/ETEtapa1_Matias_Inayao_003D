@@ -1,5 +1,4 @@
 usuario:admin
-password:gzzero
+password:oracle
 gzero@gmail.com
 
-pd: ojo las pass es con zz 
