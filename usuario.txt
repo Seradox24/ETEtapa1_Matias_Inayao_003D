@@ -1,0 +1,5 @@
+usuario:admin
+password:gzzero
+gzero@gmail.com
+
+pd: ojo las pass es con zz 

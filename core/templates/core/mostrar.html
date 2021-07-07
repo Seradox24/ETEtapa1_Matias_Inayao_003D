@@ -1,0 +1,28 @@
+{% extends 'core/base.html'%}
+
+{%block contenido%}
+{%load static %}
+<div  class="mt-5 pt-5 px-5 col-12 bg-dark text-dark row d-flex " >
+    {%for p in proveedores%}
+    <div class="col">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pt-4"> 
+            <div class="card" style="width: 18rem;">
+                {%if p.logo%}
+                <img src="{{p.logo.url}}" class="card-img-top" alt="...">
+                {%endif%}
+                <div class="card-body">
+                  <h5 class="card-title">{{p.nombre | capfirst}}</h5>
+                  <p class="card-text">para ver la informacion completa del proveedor haga clik en ver mas.</p>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><p class="fw-bold">Numero de contacto</p>{{p.telefono}}</li>
+                    <li class="list-group-item"><p class="fw-bold">Email</p>{{p.email}}</li>
+                    <li class="list-group-item"><p class="fw-bold">País</p>{{p.moneda}}</li>
+                  </ul>
+                  <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+              </div>
+        </div>
+    </div>
+{%endfor%}
+</div>
+{% endblock %}

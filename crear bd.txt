@@ -1,0 +1,14 @@
+
+create user C##zero_et
+identified by oracle;
+
+grant CONNECT,RESOURCE to C##zero_et ;
+
+alter user C##zero_et DEFAULT TABLESPACE users QUOTA UNLIMITED
+on users;
+
+
+crear esquema 
+name= Ground_Zero
+usuario= C##zero_et
+password= oracle
