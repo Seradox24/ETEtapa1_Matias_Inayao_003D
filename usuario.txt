@@ -1,4 +1,0 @@
-usuario:admin
-password:oracle
-gzero@gmail.com
-
